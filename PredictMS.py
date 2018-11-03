@@ -326,8 +326,8 @@ for i in range(0, 1000):
 	Y = df2.values #Sonuçlar
 	clf = clf.fit(X, Y)
 	prediction = clf.predict([[A0,A1,A2,A3,A4,A5,A6,A7,1,A9,A10,A11,A12,A13,A14,A15,A16,-1]])
-	print(EvSahibiTakim, " - ", DeplasmanTakimi, " karşılaşması için ", i+1, ". tahminim=", end="", sep="")
-	print(prediction)
+	# print(EvSahibiTakim, " - ", DeplasmanTakimi, " karşılaşması için ", i+1, ". tahminim=", end="", sep="")
+	# print(prediction)
 	#Yüzde Hesaplama
 	if prediction=="s":
 		TS+=1
@@ -354,7 +354,7 @@ if TI!=0:
 		tahminlistesi.append("Maçı ev sahibinin kazanma ihtimali %"+str(TI/10)+".")
 		pass
 
-with open('Tahmin.csv', 'a', newline='', encoding='utf-8') as f:
+with open('Results.csv', 'a', newline='', encoding='utf-8') as f:
 	w = csv.writer(f, delimiter=',')
 	w.writerow(tahminlistesi)
 

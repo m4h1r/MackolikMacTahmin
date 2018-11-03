@@ -400,10 +400,8 @@ if TII!=0:
 		tahminlistesi.append("Maçın ikiden ikiye bitme ihtimali %"+str(TII/10)+".")
 		pass
 
-with open('Tahmin.csv', 'a', newline='', encoding='utf-8') as f:
+with open('Results.csv', 'a', newline='', encoding='utf-8') as f:
 	w = csv.writer(f, delimiter=',')
 	w.writerow(tahminlistesi)
 
-
 driver.close()
-#100 Tahmin için doğruluk payı hesaplayan bir exel dosyası oluştur.
